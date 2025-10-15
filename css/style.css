@@ -1,15 +1,23 @@
 :root{ /* root é global*/
-    --primary-color: #F5CF06; /*criando "variavél" cor primaria (toda variavél começa com "--")*/
+    --primary-color: #F5CF06; /* criando "variavél" cor primaria (toda variavél começa com "--") */
     --secundary-color: #8E4106;
 }
 body{
-    height: 100vh; /* 100vh ocupa a tela interia, sem deixar barra de rolagem*/
+    height: 100vh; /* 100vh ocupa a tela interia, sem deixar barra de rolagem */
     background-color: var(--primary-color);
     display: flex;
-    flex-direction: column; /*pra não fica um do lado do outro*/
+    flex-direction: column; /* pra não fica um do lado do outro */
+    padding: 70px;
+    font-family: Righteous, sans-serif;
 }
 header{
-    background-color: aqua;
+    display: flex;
+    gap: 16px;
+    align-items: center;
+}
+header span{
+    font-size: 32px;
+    color: var(--secundary-color);
 }
 main{
     background-color:purple;
