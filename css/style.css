@@ -25,7 +25,7 @@ main{
     flex-direction: column; /* para deixar um embaixo do outro, pois o flex deixa um do lado do outro*/
 }
 .sombra{
-    font-size: 400px;
+    font-size: 28vw; /*tamanho flexivel (muda de acordo com a resolução da tela)*/
     color: #ffffff55;
     position: absolute;
     z-index: -999;/* leva o item pra trás (nesse caso ele fica atrás de 999 itens)*/
@@ -35,7 +35,7 @@ main{
 }
 h1{
     flex-grow: 1;
-    font-size: 300px;
+    font-size: 22vw; /*tamanho flexivel (muda de acordo com a resolução da tela)*/
     color: white;
     display: flex;
     justify-content: center; /*coloca no centro horizontalmente*/
@@ -75,4 +75,38 @@ h1{
 footer{
     text-align: center;
     color: var(--secundary-color);
+}
+/*responsividade do site*/
+@media (max-width: 1024px){ /*resolução tablet (no máximo 1024 px)*/
+    body{
+        padding: 30px;
+    }
+    main{
+        justify-content: space-between;
+    }
+    .sombra{
+        transform: translate(-50%,-180%);
+    }
+    h1{
+        transform: translate(0%,-30%);
+    }
+    .container{
+        flex-direction: column; /*deixar um em cima do outro (coluna)*/
+        height: auto; /*vai acompanhar o conteúdo*/
+        align-items: center; /*deixar os itens no centro*/
+        padding: 0;
+        gap: 8px;
+    }
+    .descricao p {
+        text-align: center;
+    }
+    .pikachu{
+        transform: translate(-45%,-50%);
+    }
+    footer{
+        display: none;
+    }
+}
+@media (mas-width: 480px){ /*resolução mobile (no máximo 480px)*/
+
 }
